@@ -1,5 +1,7 @@
 package rpn.calculator.functions;
 
+import java.math.BigDecimal;
+
 public class SqrtFunction extends AbstractFunction {
 
     public SqrtFunction() {
@@ -8,8 +10,7 @@ public class SqrtFunction extends AbstractFunction {
 
     @Override
     public double execute(String... params) {
-        // TODO Auto-generated method stub
-        return 0;
+        return BigDecimal.valueOf(Math.sqrt(Double.valueOf(params[0]))).doubleValue();
     }
     
 }

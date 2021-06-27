@@ -1,5 +1,7 @@
 package rpn.calculator.operators;
 
+import java.math.BigDecimal;
+
 import rpn.calculator.exceptions.ExpressionException;
 
 public class SubtractOperator extends AbstractOperator {
@@ -10,8 +12,9 @@ public class SubtractOperator extends AbstractOperator {
 
     @Override
     public double doCal(double first, double second) throws ExpressionException {
-        // TODO Auto-generated method stub
-        return 0;
+        BigDecimal b1 = new BigDecimal(first);
+        BigDecimal b2 = new BigDecimal(second);
+        return b1.subtract(b2).doubleValue();
     }
-    
+
 }
