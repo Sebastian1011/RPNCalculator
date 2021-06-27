@@ -2,6 +2,8 @@ package rpn.calculator.functions;
 
 import java.math.BigDecimal;
 
+import rpn.calculator.exceptions.ExpressionException;
+
 public class SqrtFunction extends AbstractFunction {
 
     public SqrtFunction() {
@@ -9,8 +11,12 @@ public class SqrtFunction extends AbstractFunction {
     }
 
     @Override
-    public double execute(String... params) {
-        return BigDecimal.valueOf(Math.sqrt(Double.valueOf(params[0]))).doubleValue();
+    public double execute(Double... params) throws ExpressionException {
+        try {
+            return BigDecimal.valueOf(Math.sqrt(params[0])).doubleValue();
+        } catch (RuntimeException e) {
+            throw new ExpressionException(e.getMessage());
+        }
     }
-    
+
 }

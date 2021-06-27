@@ -9,7 +9,7 @@ public interface FunctionProvider {
      * @param name
      * @return {@link AbstractFunction}
      */
-    AbstractFunction getOperator(String name);
+    AbstractFunction getFunction(String name);
 
     /**
      * check func name 是否合法

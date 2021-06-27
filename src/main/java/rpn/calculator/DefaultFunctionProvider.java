@@ -19,7 +19,7 @@ public class DefaultFunctionProvider implements FunctionProvider {
     }
 
     @Override
-    public AbstractFunction getOperator(String name) {
+    public AbstractFunction getFunction(String name) {
         return functions.get(name);
     }
 

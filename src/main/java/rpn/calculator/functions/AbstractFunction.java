@@ -1,5 +1,7 @@
 package rpn.calculator.functions;
 
+import rpn.calculator.exceptions.ExpressionException;
+
 public abstract class AbstractFunction {
     private final String name;
     private final int paramCount;
@@ -24,7 +26,7 @@ public abstract class AbstractFunction {
         return paramCount;
     }
 
-    public abstract double execute(String... params);
+    public abstract double execute(Double... params) throws ExpressionException;
 
     @Override
     public boolean equals(Object obj) {
