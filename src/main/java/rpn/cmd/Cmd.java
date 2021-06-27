@@ -24,9 +24,10 @@ public class Cmd implements CalApp {
         while (input.hasNextLine()) {
             String[] params = parse(input.nextLine());
             try {
-                calculator.doRpn(params);
+                System.out.println(calculator.doRpn(params));
             } catch (RPNException e) {
                 System.out.println(e.getMessage());
+                System.out.println(calculator.printNumStack());
             }
         }
         input.close();

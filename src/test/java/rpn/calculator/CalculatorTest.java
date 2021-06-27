@@ -23,59 +23,59 @@ public class CalculatorTest {
     @Test
     public void calculatorTest() throws ExpressionException, OpNotSupportedException {
         String res = calculator.doRpn(new String[] { "5", "2" });
-        assertTrue(stringCompare("5 2", res));
+        assertTrue(stringCompare("stack: 5 2", res));
         res = calculator.doRpn(new String[] {"clear", "3", "4", "-"});
-        assertTrue(stringCompare("-1", res));
+        assertTrue(stringCompare("stack: -1", res));
     }
 
     @Test
     public void sqrtTest() throws ExpressionException, OpNotSupportedException {
         String res = calculator.doRpn(new String[] { "9", "sqrt" });
-        assertTrue(stringCompare("3", res));
+        assertTrue(stringCompare("stack: 3", res));
     }
 
     @Test
     public void sqrtDTest() throws ExpressionException, OpNotSupportedException {
         String res = calculator.doRpn(new String[] { "2", "sqrt" });
-        assertTrue(stringCompare("1.4142135623", res));
+        assertTrue(stringCompare("stack: 1.4142135623", res));
     }
 
     @Test
     public void clearTest() throws ExpressionException, OpNotSupportedException {
         String res = calculator.doRpn(new String[] { "5", "2", "-"});
-        assertTrue(stringCompare("3", res));
+        assertTrue(stringCompare("stack: 3", res));
         res = calculator.doRpn(new String[] { "3", "-"});
-        assertTrue(stringCompare("0", res));
+        assertTrue(stringCompare("stack: 0", res));
         res = calculator.doRpn(new String[] { "clear"});
-        assertTrue(stringCompare("", res));
+        assertTrue(stringCompare("stack:", res));
     }
     @Test
     public void undoTest() throws ExpressionException, OpNotSupportedException {
         String res = calculator.doRpn(new String[] { "5", "4", "3", "2"});
-        assertTrue(stringCompare("5 4 3 2", res));
+        assertTrue(stringCompare("stack: 5 4 3 2", res));
         res = calculator.doRpn(new String[] { "undo", "undo", "*"});
-        assertTrue(stringCompare("20", res));
+        assertTrue(stringCompare("stack: 20", res));
         res = calculator.doRpn(new String[] { "5", "*"});
-        assertTrue(stringCompare("100", res));
+        assertTrue(stringCompare("stack: 100", res));
         res = calculator.doRpn(new String[] { "undo"});
-        assertTrue(stringCompare("20 5", res));
+        assertTrue(stringCompare("stack: 20 5", res));
     }
 
     @Test
     public void divideTest() throws ExpressionException, OpNotSupportedException {
         String res = calculator.doRpn(new String[] { "7", "12", "2", "/"});
-        assertTrue(stringCompare("7 6", res));
+        assertTrue(stringCompare("stack: 7 6", res));
         res = calculator.doRpn(new String[] { "*"});
-        assertTrue(stringCompare("42", res));
+        assertTrue(stringCompare("stack: 42", res));
         res = calculator.doRpn(new String[] { "4", "/"});
-        assertTrue(stringCompare("10.5", res));
+        assertTrue(stringCompare("stack: 10.5", res));
     }
 
     @Test
     public void errorTest() throws ExpressionException, OpNotSupportedException {
         assertThrows("operator * (position: 15): insufficient parameters", ExpressionException.class, () -> calculator.doRpn(new String[] {"1", "2", "3", "*", "5", "+", "*", "*", "6", "5"}));
         String res  = calculator.printNumStack();
-        assertTrue(stringCompare("11", res));
+        assertTrue(stringCompare("stack: 11", res));
     }
 
  

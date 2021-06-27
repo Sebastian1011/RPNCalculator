@@ -66,9 +66,9 @@ public class RPNCalculator {
                 }
                 numStack.push(func.execute(args));
                 record();
-            } else if (o == "undo") {
+            } else if ("undo".equals(o)) {
                 undo();
-            } else if (o == "clear") {
+            } else if ("clear".equals(o)) {
                 clear();
             } else {
                 throw new OpNotSupportedException("不支持的操作: " + o);
@@ -113,7 +113,7 @@ public class RPNCalculator {
      * @return
      */
     public String printNumStack() {
-        StringBuilder builder = new StringBuilder();
+        StringBuilder builder = new StringBuilder("stack: ");
         for (Double d : numStack) {
             builder.append(formatter.format(d));
             builder.append(" ");
