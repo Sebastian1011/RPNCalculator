@@ -7,11 +7,11 @@ import rpn.calculator.exceptions.ExpressionException;
  * 
  * @author zmzhang
  */
-public abstract class AbstractOP {
+public abstract class AbstractOperator {
     private final String operator;
     private volatile int hashCode = 0;
 
-    public AbstractOP(final String op) {
+    public AbstractOperator(final String op) {
         this.operator = op;
     }
 
@@ -43,7 +43,7 @@ public abstract class AbstractOP {
     public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        final AbstractOP that = (AbstractOP) o;
+        final AbstractOperator that = (AbstractOperator) o;
         return operator.equals(that.operator);
     }
 
