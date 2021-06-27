@@ -10,3 +10,4 @@ bin
 .gitattributes
 .project
 .settings
+.vscode
