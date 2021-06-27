@@ -33,3 +33,11 @@ application {
     // Define the main class for the application.
     mainClassName = 'rpn.App'
 }
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'rpn.App'
+        )
+    }
+}

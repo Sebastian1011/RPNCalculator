@@ -3,9 +3,12 @@
  */
 package rpn;
 
+import rpn.cmd.Cmd;
+
 public class App {
 
     public static void main(String[] args) {
-        
+        CalApp cal = new Cmd();
+        cal.start();
     }
 }

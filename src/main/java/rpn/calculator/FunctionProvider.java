@@ -17,5 +17,5 @@ public interface FunctionProvider {
      * @return
      */
     boolean isFuncAvailable(String name);
-    
+
 }

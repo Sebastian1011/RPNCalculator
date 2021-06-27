@@ -7,3 +7,6 @@
 
 ** Build
     ./gradlew build
+
+** 运行
+    java -jar build/libs/rpn.jar
