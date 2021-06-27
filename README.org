@@ -1,1 +1,9 @@
 * RPN
+    逆波兰计算器
+
+** Requires
+    - Openjdk@11.0.11
+    - gradle@6.6.1
+
+** Build
+    ./gradlew build
