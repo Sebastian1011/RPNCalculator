@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 
 import rpn.calculator.exceptions.ExpressionException;
 
+/**
+ * 减法实现
+ * 
+ * @author zmzhang
+ */
 public class SubtractOperator extends AbstractOperator {
 
     public SubtractOperator() {

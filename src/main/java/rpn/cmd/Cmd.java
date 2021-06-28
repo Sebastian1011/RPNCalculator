@@ -10,7 +10,7 @@ import rpn.calculator.RPNFactory;
 import rpn.calculator.exceptions.RPNException;
 
 /**
- * CMD app implement
+ * RPN 计算器命令行程序实现类
  * 
  * @author zmzhang
  */

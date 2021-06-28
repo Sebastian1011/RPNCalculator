@@ -6,6 +6,11 @@ import java.util.Map;
 import rpn.calculator.functions.AbstractFunction;
 import rpn.calculator.functions.SqrtFunction;
 
+/**
+ * 默认 function provider 实现，提供仅提供 sqrt 功能
+ * 
+ * @author zmzhang
+ */
 public class DefaultFunctionProvider implements FunctionProvider {
     private Map<String, AbstractFunction> functions;
 

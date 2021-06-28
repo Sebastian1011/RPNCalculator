@@ -1,7 +1,7 @@
 package rpn;
 
 /**
- * CMD 和 GUI app 实现的接口
+ * CMD 和 GUI app 抽象接口，方便实现多种客户端形式
  * 
  * @author zmzhang
  */

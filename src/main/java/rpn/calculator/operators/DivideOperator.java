@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 
 import rpn.calculator.exceptions.ExpressionException;
 
+/**
+ * 除法实现
+ * 
+ * @author zmzhang
+ */
 public class DivideOperator extends AbstractOperator {
 
     public DivideOperator() {

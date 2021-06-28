@@ -2,6 +2,11 @@ package rpn.calculator;
 
 import rpn.calculator.functions.AbstractFunction;
 
+/**
+ * 功能函数 provider
+ * 
+ * @author zmzhang
+ */
 public interface FunctionProvider {
     
     /**

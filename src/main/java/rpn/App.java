@@ -8,6 +8,7 @@ import rpn.cmd.Cmd;
 public class App {
 
     public static void main(String[] args) {
+        //TODO 可根据传入参数使用工厂创建不同类型的计算器：命令行，图形界面
         CalApp cal = new Cmd();
         cal.start();
     }

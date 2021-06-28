@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 
 import rpn.calculator.exceptions.ExpressionException;
 
+/**
+ * 乘法实现
+ * 
+ * @author zmzhang
+ */
 public class MultiplyOperator extends AbstractOperator {
 
     public MultiplyOperator() {

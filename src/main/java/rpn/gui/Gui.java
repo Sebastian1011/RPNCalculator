@@ -3,7 +3,7 @@ package rpn.gui;
 import rpn.CalApp;
 
 /**
- * @TODO GUI app implement
+ * @TODO GUI 程序实现
  * @author zmzhang
  */
 public class Gui implements CalApp {
