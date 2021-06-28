@@ -21,6 +21,7 @@ public class Cmd implements CalApp {
         RPNFactory factory = new DefaultRPNFactory();
         RPNCalculator calculator = factory.getRpnCalculator();
         Scanner input = new Scanner(System.in);
+        System.out.println("Please input numbers and operators: ");
         while (input.hasNextLine()) {
             String[] params = parse(input.nextLine());
             try {
