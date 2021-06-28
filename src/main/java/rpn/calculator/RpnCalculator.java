@@ -16,14 +16,14 @@ import rpn.calculator.functions.AbstractFunction;
 public class RPNCalculator {
     private final FunctionProvider functions;
     private final OperatorProvider operators;
-    private final NumFormatter formatter;
+    private final StackFormatter formatter;
     // 数据栈
     private Stack<Double> numStack;
     // 操作栈，用于 undo
     private Stack<List<Double>> logStack;
 
     public RPNCalculator(final FunctionProvider functions, final OperatorProvider operators,
-            final NumFormatter formatter) {
+            final StackFormatter formatter) {
         this.functions = functions;
         this.operators = operators;
         this.formatter = formatter;
@@ -113,11 +113,7 @@ public class RPNCalculator {
      * @return
      */
     public String printNumStack() {
-        StringBuilder builder = new StringBuilder("stack: ");
-        for (Double d : numStack) {
-            builder.append(formatter.format(d));
-            builder.append(" ");
-        }
-        return builder.toString().trim();
+        Stack<Double> clone = (Stack<Double>)numStack.clone();
+        return formatter.format(clone);
     }
 }
